@@ -16,3 +16,7 @@ MuJoCo 3.17 CPU batch; `--jobs 8` sets parallelism. Missing data and weights are
 downloaded and hash-checked; results and traces stay outside Git.
 
 [Inference validation](validation/README.md) · [Native parity report](validation/native-parity.json)
+
+## Observation track
+
+The restricted observation track is not yet admitted for this checkpoint. [Admission and special handling](admission.json) · [Rules](MotionChallenge-Core/docs/OBSERVATIONS.md).

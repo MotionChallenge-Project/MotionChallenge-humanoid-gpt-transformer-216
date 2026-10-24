@@ -1,0 +1,44 @@
+{
+  "schema": "MotionChallenge/observation-admission-v1",
+  "model": "humanoid-gpt-transformer-216",
+  "display_name": "Humanoid-GPT Transformer 216",
+  "state_access": "ideal-proprioceptive-no-position-v1",
+  "status": "requires_author_deployment_validation",
+  "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+  "auxiliary_artifacts": {},
+  "checkpoint_origin": {
+    "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
+    "author_release_label": "GalaxyGeneralRobotics/Humanoid-GPT",
+    "kind": "author_file",
+    "kind_label": "Author-released checkpoint",
+    "artifact_page_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+    "original_filename": "pns_wo_priv216_trans.onnx",
+    "verification": "Original author Transformer 216 ONNX without conversion or weight changes. SHA256 and author Git blob 82ed6796c50b53d3fc260741dbb676b09ac0084f verified.",
+    "download_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+    "sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+    "bytes": 42977083
+  },
+  "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+  "author_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "base_adapter_commit": "639da90cef226f1cef45532bad537240b64d2543",
+  "production_source_sha256": {
+    "adapter.py": "db07cbb6cd11445de4f2ca6b2d26f23af45d7d6046c1eef3c664d4b83b8a6cf3",
+    "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+    "native-sources.json": "0a34a0b4f2196a9fa1bc1fe5e890e26bb3d3c2f38f188b5e3e2afccd9c27d311",
+    "policy.json": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
+    "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
+    "validate_inference.py": "71e15a027bf2d9c7429292c9606e95c70b2c91dde4e6ea3b0f8c326486667c27"
+  },
+  "prior_native_parity_sha256": {
+    "validation/native-parity-linux.json": "bd36aa00e7c684304a4138f559ee7301ba7a5d2e41581465facd60ffcf49efbf",
+    "validation/native-parity.json": "2085aa37481c8a92aabba60d43a4d408060f70ecf423a856f830bab6b8e07066"
+  },
+  "handling": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
+  "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
+  "special_handling": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
+  "new_evaluation": {
+    "status": "not_started",
+    "inherited_scores": false
+  },
+  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216"
+}
