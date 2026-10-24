@@ -13,7 +13,7 @@
   ],
   "reference_history_s": 0,
   "reference_preview_s": 0.02,
-  "state_access": "privileged-state-v0",
+  "state_access": "ideal-proprioceptive-no-position-v1",
   "action_mode": "joint-pd-feedforward",
   "inference_config": "policy.json",
   "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
@@ -26,5 +26,9 @@
   "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
   "kinematics": "assets/g1_5010_kinematics.xml",
   "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
-  "history_len": 16
+  "history_len": 16,
+  "observation_contract": {
+    "admission_record": "admission.json",
+    "admission_sha256": "2509a40af09449d3f8ce33b0de7d523db8297c77a3140a8c13d1bbd0e447633e"
+  }
 }
