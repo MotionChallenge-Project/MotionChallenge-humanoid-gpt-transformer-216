@@ -5,7 +5,7 @@
   "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
   "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
   "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
-  "author_inference_review": "160 matched-input cases, 4 resets and 32 endpoint cases passed the fixed 2e-5 tolerance on macOS and Linux. macOS comparisons were exact; Linux maximum observation/action difference was 4.95e-6 and motor-target difference 2.17e-6 rad. Full-suite verification is separate.",
+  "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
   "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
   "legacy_results": "not transferable to this adapter revision without rerunning",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",

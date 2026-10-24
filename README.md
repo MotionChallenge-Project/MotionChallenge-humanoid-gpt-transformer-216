@@ -12,7 +12,7 @@ uv run evaluate.py
 ```
 
 Produces success, completion and six MPBPE values in a verified `result.json`.
-MuJoCo 3.17 CPU batch; `--jobs 8` sets parallelism. Missing data and weights are
+MuJoCo 3.17 CPU batch; `--jobs` sets parallelism. Missing data and weights are
 downloaded and hash-checked; results and traces stay outside Git.
 
 [Inference validation](validation/README.md) · [Native parity report](validation/native-parity.json)
@@ -21,5 +21,4 @@ downloaded and hash-checked; results and traces stay outside Git.
 
 Ideal proprioception, without robot world-position or contact feedback. [Checkpoint requirements](admission.json) · [Rules](MotionChallenge-Core/docs/OBSERVATIONS.md).
 
-Evaluation is unavailable until this checkpoint has a verified author-supported
-inference path under these rules. The admission record describes the gap.
+Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and 16-frame history. No measured robot position or position integration.

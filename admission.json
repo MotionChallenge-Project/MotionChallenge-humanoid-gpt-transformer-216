@@ -3,7 +3,7 @@
   "model": "humanoid-gpt-transformer-216",
   "display_name": "Humanoid-GPT Transformer 216",
   "state_access": "ideal-proprioceptive-no-position-v1",
-  "status": "requires_author_deployment_validation",
+  "status": "inference_verified",
   "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
   "auxiliary_artifacts": {},
   "checkpoint_origin": {
@@ -22,23 +22,26 @@
   "author_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
   "base_adapter_commit": "639da90cef226f1cef45532bad537240b64d2543",
   "production_source_sha256": {
-    "adapter.py": "db07cbb6cd11445de4f2ca6b2d26f23af45d7d6046c1eef3c664d4b83b8a6cf3",
+    "adapter.py": "aebf9f6911a4855c16779ee39b411865f09db51087a584c3be6bf5bb5e82b463",
     "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
     "native-sources.json": "0a34a0b4f2196a9fa1bc1fe5e890e26bb3d3c2f38f188b5e3e2afccd9c27d311",
     "policy.json": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
     "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
-    "validate_inference.py": "71e15a027bf2d9c7429292c9606e95c70b2c91dde4e6ea3b0f8c326486667c27"
+    "validate_inference.py": "0a31bf9f298edf059726a87ba120dc859b0d2c1ee40e94ed5674396709a21e27"
   },
   "prior_native_parity_sha256": {
-    "validation/native-parity-linux.json": "bd36aa00e7c684304a4138f559ee7301ba7a5d2e41581465facd60ffcf49efbf",
-    "validation/native-parity.json": "2085aa37481c8a92aabba60d43a4d408060f70ecf423a856f830bab6b8e07066"
+    "validation/native-parity.json": "c5e4bb547728468b1843f4f649fdc622559e377ed1f74a8e9054727d00bc3e14",
+    "validation/native-parity-linux.json": "d6e486f7143d62a6ece7b9e42c2b80c07f3ae29d2e0cec0df32754a4a7e89dd3"
   },
-  "handling": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
-  "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-  "special_handling": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
-  "new_evaluation": {
-    "status": "not_started",
-    "inherited_scores": false
-  },
-  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216"
+  "handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and 16-frame history. No measured robot position or position integration.",
+  "actual_position_integration": "No measured robot translation, contact inputs or explicit position integration.",
+  "special_handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and 16-frame history. No measured robot position or position integration.",
+  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216",
+  "dependency_test": {
+    "path": "validation/observation-access.json",
+    "sha256": "7c682a7613bcad540f98a58d156252d948f45771262d05950ec888b30cd4070a",
+    "code": "validate_inference.py",
+    "cases": 160,
+    "resets": 4
+  }
 }

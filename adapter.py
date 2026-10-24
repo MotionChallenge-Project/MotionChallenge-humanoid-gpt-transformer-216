@@ -26,8 +26,9 @@ class HumanoidGPT(ONNXController):
         q, qd, omega, gravity, _ = self.proprio(state)
         current, future = self.reference.update(reference)
         actual_heading = quat_heading(np.asarray(state.root_orientation_xyzw)[[3, 0, 1, 2]])
+        # Author infer_onnx_real uses this fixed synthetic root, never robot position.
         position_error = R.from_euler('z', -float(actual_heading)).apply(
-            current['qpos'][:3] - np.asarray(state.root_position_world_m))[:2]
+            current['qpos'][:3] - np.array([0., 0., .78]))[:2]
         heading_error = quat_heading(current['qpos'][3:7]) - actual_heading
         heading_error = np.arctan2(np.sin(heading_error), np.cos(heading_error))
         command = np.r_[future['qpos'][7:] - self.default.astype(np.float32), future['qpos'][2],

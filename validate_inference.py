@@ -4,6 +4,7 @@ import ast
 from dataclasses import replace
 import hashlib
 import json
+import sys
 from pathlib import Path
 from types import SimpleNamespace as NS
 import xml.etree.ElementTree as ET
@@ -15,6 +16,7 @@ from scipy.spatial.transform import Rotation as R, Slerp
 from adapter import HumanoidGPT
 from motion_challenge.physics import World
 from motion_challenge.sdk import ReferenceFrame
+from motion_challenge.runtime.observations import controller_state, PROPRIOCEPTIVE
 from motion_challenge.validation import external_output_path
 
 
@@ -54,7 +56,7 @@ def load_author(source):
     selected(source, 'scripts/inference.py', {'_convert_traj_to_kpt': None}, namespace)
     selected(source, 'tracking/infer_utils.py', {
         'apply_ema_qpos': None,
-        'G1TrackInferFn': {'__init__', 'infer_onnx', 'update_state', 'update_coord_cmd',
+        'G1TrackInferFn': {'__init__', 'infer_onnx', 'infer_onnx_real', 'update_state', 'update_coord_cmd',
                           'get_nn_state', 'nn2motor_action', 'get_mj_feet_contact'},
     }, namespace)
     selected(source, "projects/transformer/infer_utils.py", {"G1TrackTransformerInferFn": None}, namespace)
@@ -85,6 +87,7 @@ def main():
     pins = json.loads((root / 'native-sources.json').read_text())
     for item in pins['files']:
         assert hashlib.sha256((args.source / item['path']).read_bytes()).hexdigest() == item['sha256']
+    sys.path.insert(0, str(args.source.resolve()))
     native = load_author(args.source)
     consts = native['consts']
     runtime = json.loads((root / 'runtime.json').read_text())
@@ -170,7 +173,7 @@ def main():
             data.qvel[:6] = world.data.qvel[:6]
             data.qvel[vadr] = np.asarray(state.joint_velocity_rad_s)[order]
             mujoco.mj_forward(model, data)
-            packet = shuffle(state)
+            packet = shuffle(controller_state(state, PROPRIOCEPTIVE))
             window = tuple(shuffle(replace(refs[i], requested_time_s=when))
                            for i, when in ((index, step*.02), (future, (step+1)*.02)))
             if step == 0:
@@ -178,7 +181,11 @@ def main():
             target = policy.act(packet, window)
             ref_state = {'ref_curr': {k: v[index:index+1] for k, v in features.items()},
                          'ref_next': {k: v[future:future+1] for k, v in features.items()}}
-            native_target = fn.infer_onnx(NS(mj_data=data), ref_state)
+            native_target = fn.infer_onnx_real(
+                np.asarray(state.root_orientation_xyzw)[[3, 0, 1, 2]],
+                R.from_quat(state.root_orientation_xyzw).inv().apply(state.root_angular_velocity_world_rad_s),
+                np.asarray(state.joint_position_rad)[order],
+                np.asarray(state.joint_velocity_rad_s)[order], ref_state)
             compare('reference_qpos', policy.reference.cache[round(refs[future].source_time_s, 9)]['qpos'], features['qpos'][future])
             compare('reference_cvel', policy.reference.cache[round(refs[future].source_time_s, 9)]['cvel'], features['kpt_cvel_in_gv'][future, 0])
             compare('observation', captured['adapter_obs'], captured['native_obs'])
@@ -192,7 +199,8 @@ def main():
                   cases=160, resets=4, endpoint_cases=endpoints, shuffled_joint_order=True,
                   quaternion_sign_flips=True, max_abs_errors=errors, tolerance=tolerance,
                   source_commit=pins['commit'], checkpoint_sha256=runtime['weights_sha256'], history_len=16,
-                  comparison='Unmodified author EMA, qpos conversion, observation, state update, CPU ONNX inference and motor mapping; identical actual states and independently maintained action histories.',
+                  comparison='Unmodified author infer_onnx_real, EMA, reference FK, observation, CPU ONNX inference and motor mapping; independently maintained action histories. Adapter receives only the Core proprioceptive packet.',
+                  deployment='Author offline-motion hardware route: fixed synthetic root [0,0,0.78], no robot position or position integration.',
                   adaptations='Canonical reference arrives at50Hz; EMA is policy-input-only. Fresh inference instance per clip; hold the final feature at endpoint. Author FK inertials retained, benchmark physics unchanged.')
     output = external_output_path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
