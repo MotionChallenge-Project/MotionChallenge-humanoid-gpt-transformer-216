@@ -1,0 +1,167 @@
+{
+  "repository": "GalaxyGeneralRobotics/Humanoid-GPT",
+  "commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
+      "bytes": 6940,
+      "git_blob": "7347560873277983cf5d0c37204a340acb811f09",
+      "sha256": "368f07200de2ef103f165abceb267f6900131ad6702ef6f5f1a8052892ffef60"
+    },
+    {
+      "path": "scripts/inference.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/scripts/inference.py",
+      "bytes": 14467,
+      "git_blob": "edc24deadd53f36d4a870cb4e27a25ad21f312af",
+      "sha256": "858ff6870e95965733a7d1fe4c34e02dcfe999c26b9a2ac40993365aaccccca6"
+    },
+    {
+      "path": "tracking/constants.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/tracking/constants.py",
+      "bytes": 12438,
+      "git_blob": "3ed2a8da99681aeb0b49b357fc2b3f3fe523b832",
+      "sha256": "2f664a0819d72fe7cddcb83823ed4281fc2d11191f4f2d05778e16881a0675d9"
+    },
+    {
+      "path": "tracking/convert_qpos2kpt.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/tracking/convert_qpos2kpt.py",
+      "bytes": 32775,
+      "git_blob": "ccef35f176729e0249619cebc57e6838a175e41e",
+      "sha256": "7925add80edb9cbca1d66271dcb32cce116cfa698edc6c6090cc0e2bb89aec4a"
+    },
+    {
+      "path": "tracking/infer_utils.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/tracking/infer_utils.py",
+      "bytes": 28422,
+      "git_blob": "18cf7f0bc887c95e0690fd3584aa99c4eaa722cc",
+      "sha256": "cf77ce0d373c7477d5a821b91db2d83227184800d979fccfd4ece2dc2f497ea2"
+    },
+    {
+      "path": "tracking/policy.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/tracking/policy.py",
+      "bytes": 9201,
+      "git_blob": "20dfc27961ae36e81bb15fe4b1e91b1b0c5eecf2",
+      "sha256": "8cc99566685b151b7300d88961cd17986b863a1bd0627643c84187252aaca09a"
+    },
+    {
+      "path": "storage/assets/unitree_g1_5010/g1_mjx_track.xml",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/assets/unitree_g1_5010/g1_mjx_track.xml",
+      "bytes": 35484,
+      "git_blob": "ca4a5076fb3388241f09bfecb35a5f1a2e7f4bf2",
+      "sha256": "38b954404d571ed4feb62b8940beef2ea3bffae1767fd96c8b2acf7b9ba5ea40"
+    },
+    {
+      "path": "storage/assets/unitree_g1_5010/scene_mjx_track.xml",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/assets/unitree_g1_5010/scene_mjx_track.xml",
+      "bytes": 9659,
+      "git_blob": "f5251a740633671df5acb28b4734fa6493b0b5b4",
+      "sha256": "beed4d71105b33c4355de8df7e2ac9c4516841244344a51808a9900c6a199790"
+    },
+    {
+      "path": "utils/hand.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/utils/hand.py",
+      "bytes": 7566,
+      "git_blob": "a729dec50fb2c0c837c1b8ee1a021b551f71415a",
+      "sha256": "8f38f92b42a9e0ddfa935ded63759d465e91c97eb22fbac44113a98d2d2caab3"
+    },
+    {
+      "path": "utils/path.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/utils/path.py",
+      "bytes": 477,
+      "git_blob": "9c96a19ca6a023fbbde23f84183bc255c26e4d16",
+      "sha256": "0fbf9c55fa5f828f078d450ff2971569ef9e3f70284734665baf6a241aaa267c"
+    },
+    {
+      "path": "utils/sim_mj.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/utils/sim_mj.py",
+      "bytes": 3150,
+      "git_blob": "96733780771c8966e3a8ccc8274a8af2d86323b0",
+      "sha256": "f7c7b2a2559f7376064bb6e22e8166ebb1f545c10e82e7acdcbab26fea32f93b"
+    },
+    {
+      "path": "utils/transforms_np.py",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/utils/transforms_np.py",
+      "bytes": 6595,
+      "git_blob": "fd0da0fef8a5b1251356bc05148499be852c1469",
+      "sha256": "96ef3ad33590335c807cd3a72b9d462652f3c7cac6a918a0a2d0e6f30ef08e6d"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/LICENSE",
+      "bytes": 11336,
+      "git_blob": "816b256f137c9c562f6d682befec0b9ae1b01bcf",
+      "sha256": "837d175f7c6d0d1cd31e3bed24bb9f5fa0428e425dcb94a1eb65ca8c4ac01a15"
+    },
+    {
+      "model": "hgpt",
+      "path": "projects/transformer/eval_parallel.py",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/projects/transformer/eval_parallel.py",
+      "bytes": 11183,
+      "git_blob_sha1": "f429a5493918a00b4bf592669a50033fd6231e8e",
+      "sha256": "ad1bb466de8298bce12d18edbb88a3accf6fd3bad1e4516904f410c0a04dd4e2"
+    },
+    {
+      "model": "hgpt",
+      "path": "projects/transformer/__init__.py",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/projects/transformer/__init__.py",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "model": "hgpt",
+      "path": "projects/transformer/deploy.py",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/projects/transformer/deploy.py",
+      "bytes": 18014,
+      "git_blob_sha1": "2f4a66b63906f489664958ec38c945fe551fb5b0",
+      "sha256": "43667e1e0af598a8533a63b2666110e67c29734d7924bf402ffb674b5c962eb8"
+    },
+    {
+      "model": "hgpt",
+      "path": "projects/transformer/app.py",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/projects/transformer/app.py",
+      "bytes": 21120,
+      "git_blob_sha1": "5c0095f58ecdafdcd73de24e8058a118f404a56e",
+      "sha256": "18a6848b9c014a704db7c95e521a517ac9b48c27cceff1da0569be8fd9a45d4a"
+    },
+    {
+      "model": "hgpt",
+      "path": "projects/transformer/inference.py",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/projects/transformer/inference.py",
+      "bytes": 14787,
+      "git_blob_sha1": "f89c20f99cc608eaa14cbd2b72fda2439f27b66d",
+      "sha256": "685b41c42d95720e38afdc8184f059fd8f8fb2aabad8e56707329f750050cb19"
+    },
+    {
+      "model": "hgpt",
+      "path": "projects/transformer/infer_utils.py",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/projects/transformer/infer_utils.py",
+      "bytes": 4020,
+      "git_blob_sha1": "2c296bd261c76f9aba3f0db2ca088aa0046b6c51",
+      "sha256": "7e1fce539c0cbc78a6a247ac96de9cf4d5a12863f369ea39e1b371b459c52b57"
+    },
+    {
+      "model": "hgpt",
+      "path": "storage/ckpts/pns_wo_priv216_trans.onnx",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+      "bytes": 42977083,
+      "git_blob_sha1": "82ed6796c50b53d3fc260741dbb676b09ac0084f",
+      "sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853"
+    }
+  ],
+  "derivatives": {
+    "assets/g1_5010_kinematics.xml": {
+      "sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
+      "source": "storage/assets/unitree_g1_5010/g1_mjx_track.xml",
+      "transformation": "Remove mesh assets and mesh geoms only; preserve all30 explicit inertials, body transforms, joints, actuators and sensors. Used only for reference FK; never used for benchmark stepping."
+    }
+  }
+}

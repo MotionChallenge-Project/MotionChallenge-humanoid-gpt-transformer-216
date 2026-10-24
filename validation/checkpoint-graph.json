@@ -1,0 +1,46 @@
+{
+  "inputs": [
+    {
+      "name": "obs",
+      "shape": [
+        "batch",
+        16,
+        136
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "continuous_actions",
+      "shape": [
+        "batch",
+        29
+      ]
+    }
+  ],
+  "metadata": {},
+  "operators": [
+    "Add",
+    "Concat",
+    "Constant",
+    "Div",
+    "Einsum",
+    "Gather",
+    "Gemm",
+    "MatMul",
+    "Mul",
+    "Neg",
+    "Pow",
+    "ReduceMean",
+    "Reshape",
+    "Shape",
+    "Sigmoid",
+    "Slice",
+    "Softmax",
+    "Split",
+    "Sqrt",
+    "Transpose",
+    "Unsqueeze",
+    "Where"
+  ]
+}

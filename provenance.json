@@ -1,0 +1,40 @@
+{
+  "model": "humanoid-gpt-transformer-216",
+  "submitter": "MotionChallenge",
+  "submission_type": "maintainer reproduction, not author submission",
+  "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+  "author_inference_review": "160 matched-input cases, 4 resets and 32 endpoint cases passed on macOS with zero observed difference. Linux validation and full-suite evaluation are required before ranking.",
+  "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+  "legacy_results": "not transferable to this adapter revision without rerunning",
+  "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+  "checkpoint_origin": {
+    "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
+    "author_release_label": "GalaxyGeneralRobotics/Humanoid-GPT",
+    "kind": "author_file",
+    "kind_label": "Author-released checkpoint",
+    "artifact_page_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+    "original_filename": "pns_wo_priv216_trans.onnx",
+    "verification": "Original author Transformer 216 ONNX without conversion or weight changes. SHA256 and author Git blob 82ed6796c50b53d3fc260741dbb676b09ac0084f verified.",
+    "download_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+    "sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+    "bytes": 42977083
+  },
+  "display_name": "Humanoid-GPT Transformer 216",
+  "inference_validation": "validation/native-parity.json",
+  "deployment": {
+    "route": "Author Transformer inference class, privileged=false, history_len=16, G1_VERSION=5010, HAND=Default, 50Hz.",
+    "reference_preprocessing": "Causal author EMA alpha0.8 with quaternion sign continuity and normalization, then author world-frame finite-difference qvel and5010 FK. Only policy input is filtered; scoring still uses unmodified canonical reference.",
+    "reference_window": "Current filtered reference supplies XY/yaw error; next filtered reference supplies joints,height,gravity,cvel. Endpoints reuse the final filtered feature rather than applying repeated EMA updates.",
+    "kinematics": "assets/g1_5010_kinematics.xml derives from pinned author XML by removing mesh assets/geoms only. All30 explicit inertials and body/joint transforms preserved. Used for reference features only, never simulation or scoring.",
+    "reset": "Fresh reference filter and zero last action for each clip. Author history initialization repeats the first measured observation across all 16 slots, then shifts oldest to newest.",
+    "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned.",
+    "legacy": "This Transformer checkpoint is separate from the 264 MLP. No scores or trajectories are inherited from another checkpoint.",
+    "history": "Sixteen 136D frames in oldest-to-newest order. This length follows the released ONNX shape, overriding the incompatible author script default of four frames."
+  },
+  "inference_validation_platforms": {
+    "macOS": "validation/native-parity.json"
+  },
+  "checkpoint_architecture": "Original 216_trans ONNX: 16-frame history of 136D observations, 29-action output. The artifact input requires 16 frames; the author Transformer class accepts this history length explicitly. See validation/checkpoint-graph.json."
+}

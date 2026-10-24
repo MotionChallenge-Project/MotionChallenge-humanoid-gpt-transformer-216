@@ -1,0 +1,8 @@
+[project]
+name = "MotionChallenge-humanoid-gpt-transformer-216"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["MotionChallenge-Core"]
+
+[tool.uv.sources]
+motionchallenge-core = {path = "MotionChallenge-Core", editable = true}

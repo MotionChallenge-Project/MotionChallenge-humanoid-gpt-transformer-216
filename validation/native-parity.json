@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "cases": 160,
+  "resets": 4,
+  "endpoint_cases": 32,
+  "shuffled_joint_order": true,
+  "quaternion_sign_flips": true,
+  "max_abs_errors": {
+    "reference_qpos": 0.0,
+    "reference_cvel": 0.0,
+    "observation": 0.0,
+    "action": 0.0,
+    "motor_target": 0.0,
+    "history": 0.0,
+    "same_action_motor_target": 0.0
+  },
+  "tolerance": 2e-05,
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+  "history_len": 16,
+  "comparison": "Unmodified author EMA, qpos conversion, observation, state update, CPU ONNX inference and motor mapping; identical actual states and independently maintained action histories.",
+  "adaptations": "Canonical reference arrives at50Hz; EMA is policy-input-only. Fresh inference instance per clip; hold the final feature at endpoint. Author FK inertials retained, benchmark physics unchanged."
+}

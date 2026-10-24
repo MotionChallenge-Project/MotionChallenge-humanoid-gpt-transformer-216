@@ -1,0 +1,30 @@
+{
+  "id": "humanoid-gpt-transformer-216-g1",
+  "entrypoint": "adapter:create",
+  "control_period_s": 0.02,
+  "reference_step_s": 0.02,
+  "reference_steps": [
+    0,
+    1
+  ],
+  "reference_offsets_s": [
+    0.0,
+    0.02
+  ],
+  "reference_history_s": 0,
+  "reference_preview_s": 0.02,
+  "state_access": "privileged-state-v0",
+  "action_mode": "joint-pd-feedforward",
+  "inference_config": "policy.json",
+  "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
+  "weights": "checkpoints/policy.onnx",
+  "weights_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+  "provenance_status": "author inference comparison passed on macOS; Linux validation required before ranking",
+  "official": false,
+  "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+  "kinematics": "assets/g1_5010_kinematics.xml",
+  "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
+  "history_len": 16
+}
