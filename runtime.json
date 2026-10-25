@@ -29,6 +29,8 @@
   "history_len": 16,
   "observation_contract": {
     "admission_record": "admission.json",
-    "admission_sha256": "6c6379f9c3586ff01b62f41aa19e17dedcdc6288b11636d3fb6ab10a35fb0e7e"
-  }
+    "admission_sha256": "77b793bc3e56d451742d8952ee5683d5a8ed864655609a51f57fed83a3213aae"
+  },
+  "batch_entrypoint": "parallel:create",
+  "inference_workers": 16
 }

@@ -19,6 +19,6 @@ downloaded and hash-checked; results and traces stay outside Git.
 
 ## Observations
 
-Ideal proprioception, without robot world-position or contact feedback. [Checkpoint requirements](admission.json) · [Rules](https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/85aae8656868779209b3f46696bc42883830ab3b/docs/OBSERVATIONS.md).
+Ideal proprioception, without robot world-position or contact feedback. [Checkpoint requirements](admission.json) · [Rules](https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/da0aec4023bbc3d29be67e1fce9fa9ab8a48c4b5/docs/OBSERVATIONS.md).
 
 Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and 16-frame history. No measured robot position or position integration.
