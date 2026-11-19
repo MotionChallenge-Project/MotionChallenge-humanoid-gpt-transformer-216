@@ -1,0 +1,18 @@
+{
+  "model": "humanoid-gpt-transformer-216",
+  "status": "passed",
+  "errors": [],
+  "core_commit": "2221fab60a90adc3c85b1dfd438e00244fb58263",
+  "runtime_sha256": "6ac3f87f9c6fa955914a0bd78e8f0b485f714b033733052447faf938259cbbe6",
+  "locked_environment_and_cli": true,
+  "own_core_import": "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/MotionChallenge-humanoid-gpt-transformer-216/MotionChallenge-Core/src/motion_challenge/__init__.py",
+  "admission_and_source_hashes": true,
+  "modules": [
+    "convert_weights",
+    "evaluate",
+    "tensor_adapter",
+    "tensor_common",
+    "tensor_reference",
+    "torch_graph"
+  ]
+}

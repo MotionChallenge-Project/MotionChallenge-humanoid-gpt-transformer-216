@@ -1,0 +1,18 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:1"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:2"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:3"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:4"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:5"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:6"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+     "cuda:7"   : "NVIDIA A100-SXM4-80GB" (79 GiB, sm_80, mempool enabled)
+   CUDA peer access:
+     Supported fully (all-directional)
+   Kernel cache:
+     /root/.cache/warp/1.18.0
+Module mujoco_warp._src.smooth b9cc505 load on device 'cuda:1' took 1.89 ms  (cached)
+{"status": "passed", "steps": 24, "batch": 7, "joint_order": "reversed canonical names", "partial_reset_step": 11, "partial_reset_slots": [1, 4], "observation_max_abs_error": 7.62939453125e-06, "network_max_abs_error": 7.271766662597656e-06, "joint_target_max_abs_error_rad": 2.2845419418639735e-06, "reference": "Original adapter.py observations and original ONNX per sample", "history": "Matched raw actions isolate observation and inference parity", "observation_tolerance": {"reference_cvel_absolute": 2e-05, "other_absolute": 2e-06, "relative": 2e-06}}

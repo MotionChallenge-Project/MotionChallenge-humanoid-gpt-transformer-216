@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "batch": 4096,
+  "steps": 4,
+  "partial_reset_step": 2,
+  "sampled_rows": [
+    0,
+    1,
+    2,
+    1024,
+    2048,
+    3072,
+    4095
+  ],
+  "max_pd_command_abs_error": 1.1324882507324219e-06,
+  "elapsed_s": 1.730052787810564,
+  "peak_torch_allocated_bytes": 1184893952,
+  "graph_sha256": "d780810e193eb8607727d14bbdf0fe8d41e23cffe9bdc8ddfd37b797e89a87e8",
+  "adapter_source_sha256": {
+    "tensor_common.py": "518fc3b40e5c38078d1d2fce4cf7133f6aa614b442152a01fdbbd5e600401a2e",
+    "tensor_reference.py": "a2cb49dc3e652219d9781557b86369b245b7464371b037d69f45974c819dc1be",
+    "tensor_adapter.py": "f5789a75324f32e5efdda873740efea9650d436cb0402590061ce6365c22ed36"
+  },
+  "reference": "4096-slot adapter versus independently reset 7-slot adapter; full forward without chunks"
+}

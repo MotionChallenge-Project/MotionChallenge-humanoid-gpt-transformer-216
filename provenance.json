@@ -35,5 +35,13 @@
     "macOS": "validation/native-parity.json",
     "Linux": "validation/native-parity-linux.json"
   },
-  "checkpoint_architecture": "Original 216_trans ONNX: 16-frame history of 136D observations, 29-action output. The artifact input requires 16 frames; the author Transformer class accepts this history length explicitly. See validation/checkpoint-graph.json."
+  "checkpoint_architecture": "Original 216_trans ONNX: 16-frame history of 136D observations, 29-action output. The artifact input requires 16 frames; the author Transformer class accepts this history length explicitly. See validation/checkpoint-graph.json.",
+  "batch_inference_validation": {
+    "original_checkpoint_origin": "validation/checkpoint-origin.json",
+    "conversion": "validation/mjwarp-network-parity.json",
+    "full_batch_network": "validation/full-batch-parity.json",
+    "full_batch_adapter": "validation/full-batch-adapter.json",
+    "observation_history_reset": "validation/tensor-observation-parity.json",
+    "independent_onnxruntime": "validation/onnxruntime-parity.json"
+  }
 }

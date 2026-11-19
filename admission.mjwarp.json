@@ -1,0 +1,33 @@
+{
+  "state_access": "proprioceptive-no-position-no-linear-velocity-v1",
+  "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+  "status": "inference_verified",
+  "reason": "Strict tensor observations, original inference parity and full-batch conversion checks passed.",
+  "schema": "MotionChallenge/observation-admission-v1",
+  "model": "humanoid-gpt-transformer-216",
+  "evidence_sha256": {
+    "validation/mjwarp-network-parity.json": "64b37d27dc9250b1cfc0e056e17e4f43fb01043dc26f29229916e7182c0edfa7",
+    "validation/full-batch-parity.json": "a3e9061b5b86f56924755eebca4c25f102ca06b0772bbde9a16f2d44178d4ef1",
+    "validation/tensor-observation-parity.json": "6d3eb47fdce4b4f2ef12d3b8bad842ff7366ae44928f8b4b0d374508f1e74c3e"
+  },
+  "production_source_sha256": {
+    "tensor_common.py": "518fc3b40e5c38078d1d2fce4cf7133f6aa614b442152a01fdbbd5e600401a2e",
+    "validate_batch.py": "9b9a640583cf0bea9c7df2cdff456ee7eb73d9badb2df1151e4d1784bc66356c",
+    "torch_graph.py": "7fd92161cb5465f0f2eb91429009dc3c6b6c4a4fb533300228f9c4262b6a4d4f",
+    "adapter.py": "aebf9f6911a4855c16779ee39b411865f09db51087a584c3be6bf5bb5e82b463",
+    "parallel.py": "4c1e1e89b116d7418147225054f024d338971bf838f5f6d6c28ebecc741d013a",
+    "tensor_reference.py": "a2cb49dc3e652219d9781557b86369b245b7464371b037d69f45974c819dc1be",
+    "convert_weights.py": "486998deef93d9f21d7ae21b2c9ab68721a7d300e4311fe934eb3b31b25df75f",
+    "validate_tensor.py": "9f3b1274f2ea6238f3970ec44018987cdb7293234c8e160a37f1a9dcc8914bd7",
+    "evaluate.py": "f89bd2cf0333e7f5639431d6976253da3ad6ef8d490340362f4b4630d533d071",
+    "validate_inference.py": "0a31bf9f298edf059726a87ba120dc859b0d2c1ee40e94ed5674396709a21e27",
+    "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
+    "tensor_adapter.py": "f5789a75324f32e5efdda873740efea9650d436cb0402590061ce6365c22ed36"
+  },
+  "dataset_evaluation": {
+    "lafan_report": "validation/lafan-mjwarp.json",
+    "seed_report": "validation/seed-mjwarp.json",
+    "seed_attempt_report": "validation/seed-attempt.json",
+    "reproduction_report": "validation/lafan-reproduction.json"
+  }
+}

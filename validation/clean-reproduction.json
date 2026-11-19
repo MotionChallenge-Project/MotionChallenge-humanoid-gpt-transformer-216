@@ -1,0 +1,77 @@
+{
+  "result_sha256": "de42f57728ccd70819941b5b2a8e9f97e515d1065a1fa5fd97580d89c5484585",
+  "protocol_sha256": "940b7b6e059959c17f8ad092ccc7538d217a02f368fc9c00ad7c15f2b07713a9",
+  "runtime_sha256": "6ac3f87f9c6fa955914a0bd78e8f0b485f714b033733052447faf938259cbbe6",
+  "summary": {
+    "success_count": 23,
+    "completion": 0.7752040673554929,
+    "full": {
+      "mpjpe_world_m": 3.8063337724353117,
+      "mpjpe_xy_aligned_m": 0.21870377916617176,
+      "mpjpe_xy_yaw_aligned_m": 0.1542135057455048,
+      "joint_mae_rad": 0.15304143671506906,
+      "anchor_height_error_m": 0.11406805038780413,
+      "anchor_gravity_z_error": 0.18009281592346846
+    },
+    "prefix": {
+      "mpjpe_world_m": 2.855359468735572,
+      "mpjpe_xy_aligned_m": 0.10596391312487523,
+      "mpjpe_xy_yaw_aligned_m": 0.05165059263136795,
+      "joint_mae_rad": 0.09994222774263076,
+      "anchor_height_error_m": 0.017762648170646253,
+      "anchor_gravity_z_error": 0.01230928797991999
+    }
+  },
+  "verification": {
+    "verification": "independent_cpu_trace_recomputation_passed",
+    "clips": 40,
+    "verifier_sha256": "822098272459bd44d65eb365cb0df9a5f3492410f63ab11cf055669b3a52237a",
+    "max_metric_abs_error": 2.168496948673493e-08,
+    "result_sha256": "de42f57728ccd70819941b5b2a8e9f97e515d1065a1fa5fd97580d89c5484585",
+    "scope": "Trace consistency only; a separate clean rerun is still required"
+  },
+  "workflow": "Independent locked uv environment and model-owned Core; empty evaluation cache; evaluate.py verifies explicitly supplied original weights, converts, prepares original LAFAN, evaluates 40 slots and independently verifies traces offline",
+  "installed_environment": {
+    "model": "humanoid-gpt-transformer-216",
+    "root": "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/MotionChallenge-humanoid-gpt-transformer-216",
+    "environment": "/tmp/motionchallenge-envs/humanoid-gpt-transformer-216",
+    "status": "locked_independent_environment_and_cli_verified",
+    "packages": 45,
+    "core_commit": "dbe13af14b4da5670590852b20e75fbcd509c413"
+  },
+  "core_commit": "dbe13af14b4da5670590852b20e75fbcd509c413",
+  "uv_lock_sha256": "31d01ffb4121318af3eac8bf0254108e19a83a99bccd369f20f6522db67238b8",
+  "command": [
+    "/tmp/motionchallenge-envs/humanoid-gpt-transformer-216/bin/python",
+    "evaluate.py",
+    "--dataset",
+    "lafan",
+    "--data",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/cache/datasets/lafan",
+    "--data-format",
+    "original",
+    "--cache",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/reproduction-cache/humanoid-gpt-transformer-216-independent-001",
+    "--output",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/runs/humanoid-gpt-transformer-216-lafan-independent-001",
+    "--weights",
+    "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/validation/humanoid-gpt-transformer-216/hgpt-source/storage/ckpts/pns_wo_priv216_trans.onnx",
+    "--offline",
+    "--device",
+    "cuda:1",
+    "--slots",
+    "40",
+    "--verify-jobs",
+    "8"
+  ],
+  "numeric_scope": "Full independent pipeline and CPU trace consistency; repeated rollouts are not asserted bitwise identical",
+  "status": "independent_cache_pipeline_passed",
+  "cache_initial_state": "empty",
+  "data_format": "original",
+  "clips": 40,
+  "entrypoint": "evaluate.py",
+  "input_sources": "Original local dataset and original SHA256-verified checkpoint supplied explicitly",
+  "conversion_receipt_sha256": "af372abcf71c31fdfe323385ccbb896523e81d0ac5b9e89353164d023e1a693d",
+  "same_identity_dual_run_claim": false,
+  "numerical_reproduction_claim": false
+}
